@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="https://www.lastodyssey.io/img/icon/icon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="description" content="Unite, fight, and conquer in Last Odyssey, a social Web3 game with NFT Lands and Heroes. Build, recruit, and strategize in the epic war on the continent of Middangeard." />
+	<meta name="keywords" content="Unite, fight, and conquer in Last Odyssey, a social Web3 game with NFT Lands and Heroes. Build, recruit, and strategize in the epic war on the continent of Middangeard." />
+    <title>Last Odyssey | Web3 Free-to-play Game | NFT Lands & Heroes</title>
+	<script type="text/javascript">
+		function isMobile() {
+			return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+		}
+		if(!isMobile()) {
+		    window.location.href = "index.html";
+		}
+	</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEKJ18KGQG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BEKJ18KGQG');
+    </script>
+	<!-- 引入统一的重置样式 -->
+	<link rel="stylesheet" href="assets/base.css" />
+	<link rel="stylesheet" href="assets/main.css" />
+	<link rel="stylesheet" href="assets/swiper-bundle.css"/>
+	<!-- 引入页面样式 -->
+	<link href="assets/m.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="app">
+		<div class="router-container">
+			<div class="mhome">
+			        <div class="top-nav">
+			            <div class="top-logo"></div>
+			            <div class="top-info">
+			                <p class="top-txt1">Last Odyssey</p>
+			                <p class="top-txt2">The Next-gen 5X Real-time Strategy Game     </p>
+			            </div>
+			            <div class="nav-show" @click="navshow=true"></div>
+			        </div>
+			        <div class="nav-box" :class="navshow?'shownav':'hidenav'">
+			            <div class="top-logo"></div>
+			            <div class="top-link">
+			                <a href="javascript:;" @click="gotonav(0)" :class="navnum==0?'top-nav-link cur':'top-nav-link'"><span>Home</span></a>
+			                <a href="javascript:;" @click="gotonav(1)" :class="navnum==1?'top-nav-link cur':'top-nav-link'"><span>About</span></a >
+			                <a href="javascript:;" @click="gotonav(2)" :class="navnum==2?'top-nav-link cur':'top-nav-link'"><span>Features</span></a >
+			                <a href="javascript:;" @click="gotonav(3)" :class="navnum==3?'top-nav-link cur':'top-nav-link'"><span>Roadmap</span></a >
+			                <a href="javascript:;" @click="gotonav(4)" :class="navnum==4?'top-nav-link cur':'top-nav-link'"><span>Media Kit</span></a >
+			                <a href="javascript:;" @click="gotonav(5)" :class="navnum==5?'top-nav-link cur':'top-nav-link'" style="display: none;"><span>Team</span></a >
+			                <a href="javascript:;" @click="gotonav(6)" :class="navnum==6?'top-nav-link cur':'top-nav-link'"><span>Investors & Partners</span></a >
+			                <a href="javascript:alert('Coming Soon!');" class="top-nav-link"><span>NFT</span></a >
+			                <a href="https://whitepaper.lastodyssey.io/odyssey" target="_blank" class="top-nav-link"><span>Whitepaper</span></a >
+			            </div>
+			            <a href="javascript:;" @click="navshow=false" class="nav-close sp"></a>
+			        </div>
+			
+			        <div class="page-header" id="c0">
+			            <!-- <img src="img/m/hd.jpg" alt="" class="hd_img" /> -->
+			            <div class="ani-box">
+			                <!-- <div class="hrw hrw9"><img src="img/m/ani9.png" alt="" /></div>
+			                <div class="hrw hrw10"><img src="img/m/ani10.png" alt="" /></div>
+			                <div class="hrw hrw8"><img src="img/m/ani8.png" alt="" /></div>
+			                <div class="hrw hrw3"><img src="img/m/ani3.png" alt="" /></div>
+			                <div class="hrw hrw2"><img src="img/m/ani2.png" alt="" /></div>
+			                <div class="hrw hrw6"><img src="img/m/ani6.png" alt="" /></div> -->
+			            </div>
+			            <div class="top-logo"></div>
+			            <div class="container">
+			                <div class="slogan pa" data-scroll-reveal="enter from the left over 1s"></div>
+			                <div class="slogan-s pa" data-scroll-reveal="enter from the right over 1s">
+			                    <p>Build your dynasty, strengthen your army, forge your <br> destiny—the battle for supremacy has begun in Last Odyssey!</p>
+			                </div>
+			                <div class="hd-btn" data-scroll-reveal="enter from the top over 1s">
+			                    <a href="https://discord.gg/SZfTKeV8yC" target="_blank">JOIN DISCORD</a>
+			                    <a href="https://whitepaper.lastodyssey.io/odyssey/how-to-earn-usdody-and-usdwar/usdody-and-usdwar" target="_blank">$ODY TOKEN</a>
+			                </div>
+			            </div>
+			        </div>
+			        <!-- <div class="content"> -->
+			            <div class="home-page1" id="c1">
+			                <div class="container">
+			                    <div class="tit-info">
+			                        <p class="t1" data-scroll-reveal="enter from the left  over 1s">Explore Last Odyssey</p>
+			                        <p class="t2" data-scroll-reveal="enter from the right  over 1s">A massive world that blends classic and innovative gaming elements</p>
+			                        <p class="t3" data-scroll-reveal="enter from the left  over 1s">We are a pioneering 5X game that merges MMOSLG gameplay with web3 elements, creating an innovative game without the boundaries between traditional and blockchain games.</p>
+			                    </div>
+			                    <ul class="exp-list">
+			                        <li data-scroll-reveal="enter from the bottom  over 1s">
+			                            <div class="exp-pic"><img src="img/m/pic1.png" alt="" /></div>
+			                            <div class="exp-info">
+			                                <p class="exp-tit">Get The Game</p>
+			                                <p class="exp-txt">Download the Last Odyssey on iOS or Android mobile devices.</p>
+			                            </div>
+			                            <a href="javascript:alert('COMING SOON');" class="exp-btn">Download</a>
+			                        </li>
+			                        <li data-scroll-reveal="enter from the bottom  over 1s">
+			                            <div class="exp-pic"><img src="img/m/pic2.png" alt="" /></div>
+			                            <div class="exp-info">
+			                                <p class="exp-tit">Get $ODY Token</p>
+			                                <p class="exp-txt">Learn about the $ODY token and its utilities during the war.</p>
+			                            </div>
+			                            <a href="https://whitepaper.lastodyssey.io/odyssey/how-to-earn-usdody-and-usdwar" target="_blank" class="exp-btn">VIEW TOKEN</a>
+			                        </li>
+			                        <li data-scroll-reveal="enter from the bottom  over 1s">
+			                            <div class="exp-pic"><img src="img/m/pic3.png" alt="" /></div>
+			                            <div class="exp-info">
+			                                <p class="exp-tit">Get The NFTs</p>
+			                                <p class="exp-txt">Purchase your 1st Hero & Land NFT to emabrk your journey.</p>
+			                            </div>
+			                            <a href="javascript:alert('COMING SOON');" class="exp-btn">Marketplace</a>
+			                        </li>
+			                    </ul>
+			                </div>
+			            </div> 
+			
+			            <div class="home-page2" id="c2">
+			                <div class="page2-pic">
+			                    <img src="img/m/pic4.jpg" alt="" />
+			                </div>
+			                <div class="container">
+			                    <div class="tit-info2">
+			                        <p class="t1" data-scroll-reveal="enter from the top over 1s">Redefines 4X <br>to 5X Game</p>
+			                        <p class="t2" data-scroll-reveal="enter from the top over 1s">The Last Odyssey ecosystem provides a full suite of 5X gaming elements that enchances war battle experience</p>
+			                        <ul class="page-txt" data-scroll-reveal="enter from the bottom over 1s">
+			                            <li class="cur">
+			                                <i></i>
+			                                <span>e<em>X</em>pand</span>
+			                                <p>Players claim new territory, extend influence of existing settlements</p>
+			                            </li>
+			                            <li class="cur">
+			                                <i></i>
+			                                <span>e<em>X</em>ploitx</span>
+			                                <p>Players gather and use the resource in areas they control</p>
+			                            </li>
+			                            <li class="cur">
+			                                <i></i>
+			                                <span>e<em>X</em>plore</span>
+			                                <p>Players send scouts across a map to reveal surrounding territories</p>
+			                            </li>
+			                            <li class="cur">
+			                                <i></i>
+			                                <span>e<em>X</em>terminate</span>
+			                                <p>Players attack and eliminate rival players</p>
+			                            </li>
+			                            <li class="cur">
+			                                <i></i>
+			                                <span>e<em>X</em>cange</span>
+			                                <p>Exchangeable in-game assets, decentralised governance</p>
+			                            </li>
+			                        </ul>
+			                    </div>
+			                </div>
+			            </div>   
+			
+			            <div class="home-page3">
+			                <div class="container">
+			                    <ul class="red-list">
+			                        <li>
+			                            <div class="red-pic" data-scroll-reveal="enter from the right  over 1s"><img src="img/m/pic5.png" alt="" /></div>
+			                            <div class="red-info">
+			                                <div>
+			                                    <p class="rt1" data-scroll-reveal="enter from the left  over 1s">Dynamic</p>
+			                                    <p class="rt2" data-scroll-reveal="enter from the left  over 1s">Real Time Warfare</p>
+			                                    <p class="rt3" data-scroll-reveal="enter from the left  over 1s">Engage in real-time battles and conquer your enemies whenever the moment strikes.</p>
+			                                    <a href="https://whitepaper.lastodyssey.io/odyssey/gameplay/war-of-thorne" target="_blank" class="red-btn" data-scroll-reveal="enter from the bottom  over 1s">View More</a>
+			                                </div>
+			                            </div>
+			                        </li>
+			                        <li>
+			                            <div class="red-pic" data-scroll-reveal="enter from the left  over 1s"><img src="img/m/pic6.png" alt="" /></div>
+			                            <div class="red-info">
+			                                <div>
+			                                    <p class="rt1" data-scroll-reveal="enter from the right  over 1s">Legendary Heroes</p>
+			                                    <p class="rt3" data-scroll-reveal="enter from the right  over 1s">Command famous historical heroes as NFTs, leading your army to victory on the battlefield.</p>
+			                                    <a href="https://whitepaper.lastodyssey.io/odyssey/nft-assets/hero-nfts" target="_blank" class="red-btn" data-scroll-reveal="enter from the bottom  over 1s">View More</a>
+			                                </div>
+			                            </div>
+			                        </li>
+			                        <li>
+			                            <div class="red-pic" data-scroll-reveal="enter from the right  over 1s"><img src="img/m/pic7.png" alt="" /></div>
+			                            <div class="red-info">
+			                                <div>
+			                                    <p class="rt1" data-scroll-reveal="enter from the left  over 1s">Strategic Alliances</p>
+			                                    <p class="rt3" data-scroll-reveal="enter from the left  over 1s">Forge alliances with strategic allies to expand your territories and launch coordinated rally attacks against formidable foes.</p>
+			                                    <a href="https://whitepaper.lastodyssey.io/odyssey/gameplay/nft-realm-conquest/the-realm-conquest-wars" target="_blank" class="red-btn" data-scroll-reveal="enter from the bottom  over 1s">View More</a>
+			                                </div>
+			                            </div>
+			                        </li>
+			                        <li>
+			                            <div class="red-pic" data-scroll-reveal="enter from the left  over 1s"><img src="img/m/pic8.png" alt="" /></div>
+			                            <div class="red-info">
+			                                <div>
+			                                    <p class="rt1" data-scroll-reveal="enter from the right  over 1s">Expansive 160k Land NFTs</p>
+			                                    <p class="rt2" data-scroll-reveal="enter from the right  over 1s">Epic Conflict</p>
+			                                    <p class="rt3" data-scroll-reveal="enter from the right  over 1s">Immerse yourself in large-scale warfare across a sprawling continent, where over 10,000 commanders vie for supremacy over the Capital Throne.</p>
+			                                    <a href="https://whitepaper.lastodyssey.io/odyssey/nft-assets/land-nfts" target="_blank" class="red-btn" data-scroll-reveal="enter from the bottom  over 1s">View More</a>
+			                                </div>
+			                            </div>
+			                        </li>
+			                    </ul>
+			                </div>
+			            </div>  
+			            
+			            <div class="home-page4" id="c3">
+			                <div class="container">
+			                    <div class="tit-box" data-scroll-reveal="enter from the top over 1s">
+			                        <p>ROADMAP</p>
+			                    </div>
+			                    <div class="road-con" data-scroll-reveal="enter from the top  over 1s">
+			
+			                        <div class="road-swiper">
+										<div class="swiper-wrapper">
+			                            <div class="swiper-slide">
+			                                <!-- 2024 Q1 -->
+			                                <div class="road-info road-info1 cur">
+			                                    <div class="road-titbox">
+			                                        <div>
+			                                            <p class="rit1">2024 Q1</p>
+			                                            <p class="rit2">Playable Version</p>
+			                                        </div>
+			                                    </div>
+			                                    <ul class="road-list">
+			                                        <li>Basic Alliance & Social Features</li>
+			                                        <li>Design Concept of Heroes & Lands</li>
+			                                        <li>Rally Attacks on Carcosa Monsters</li>
+			                                        <li>Design Concept of Heroes, Lands, and Other In-game Assets</li>
+			                                    </ul>
+			                                </div>
+			                            </div>
+			                            <div class="swiper-slide">
+			                                <!-- 2024 Q2 -->
+			                                <div class="road-info road-info2">
+			                                    <div class="road-titbox">
+			                                        <div>
+			                                            <p class="rit1">2024 Q2</p>
+			                                            <p class="rit2">Alpha Test</p>
+			                                        </div>
+			                                    </div>
+			                                    <ul class="road-list">
+			                                        <li>Hero NFTs Sale</li>
+			                                        <li>Hero Talent Tree</li>
+			                                        <li>Advanced Hero Battling System</li>
+			                                        <li>Collaboration with Guilds & Communities</li>
+			                                    </ul>
+			                                </div>
+			                            </div>
+			                            <div class="swiper-slide">
+			                                <!-- 2024 Q3 -->
+			                                <div class="road-info road-info3">
+			                                    <div class="road-titbox">
+			                                        <div>
+			                                            <p class="rit1">2024 Q3</p>
+			                                            <p class="rit2">Beta Test</p>
+			                                        </div>
+			                                    </div>
+			                                    <ul class="road-list">
+			                                        <li>Land NFTs Sale</li>
+			                                        <li>Wallet Integration</li>
+			                                        <li>Advanced features of Land NFTs</li>
+			                                        <li>Extened Alliance Territory System</li>
+			                                    </ul>
+			                                </div>
+			                            </div>
+			                            <div class="swiper-slide">
+			                                <!-- 2024 Q4 -->
+			                                <div class="road-info road-info4">
+			                                    <div class="road-titbox">
+			                                        <div>
+			                                            <p class="rit1">2024 Q4</p>
+			                                            <p class="rit2">Post-launch</p>
+			                                        </div>
+			                                    </div>
+			                                    <ul class="road-list">
+			                                        <li>Introduce Kingdoms vs Kingdoms</li>
+			                                        <li>Massive PvP - NFT Realm Conquest</li>
+			                                        <li>IAP features integrated with tokenomics</li>
+			                                        <li>More</li>
+			                                    </ul>
+			                                </div>
+			                            </div>
+			                            <div class="swiper-slide">
+			                                <!-- 2025 -->
+			                                <div class="road-info road-info5">
+			                                    <div class="road-titbox">
+			                                        <div>
+			                                            <!-- <p class="rit1"></p> -->
+			                                            <p class="rit2">2025</p>
+			                                        </div>
+			                                    </div>
+			                                    <ul class="road-list">
+			                                        <li>Gem NFTs Sale</li>
+			                                        <li>Tournament Season Begins</li>
+			                                        <li>And Even More !</li>
+			                                    </ul>
+			                                </div>
+			                            </div>
+			                        </div>
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			            
+			            <div class="home-page5" id="c4">
+			                <div class="container">
+			                    <div class="tit-box" data-scroll-reveal="enter from the left over 1s">
+			                        <p>Media Kit</p>
+			                    </div>
+			                    <p class="tits" data-scroll-reveal="enter from the right over 1s">Download the Last Odyssey Game Deck as well as <br/> the Press Kit for branding assets.</p>
+			                    <ul class="kit-list">
+			                        <li data-scroll-reveal="enter from the left  over 1s">
+			                            <img src="img/m/pic9.png" alt="" />
+			                            <p class="kit-tit">Last Odyssey Deck</p>
+			                            <a href="javascript:alert('COMING SOON');" class="kit-btn">DOWNLOAD</a>
+			                        </li>
+			                        <li data-scroll-reveal="enter from the right  over 1s">
+			                            <img src="img/m/pic10.png" alt="" />
+			                            <p class="kit-tit">Press Kit</p>
+			                            <a href="javascript:alert('COMING SOON');" class="kit-btn">DOWNLOAD</a>
+			                        </li>
+			                    </ul>
+			                </div>
+			            </div>
+			            
+			            <div class="home-page6" id="c5" style="display:none;">
+			                <div class="container">
+			                    <div class="tit-box tit-box2" data-scroll-reveal="enter from the top over 1s">
+			                        <p>Meet our Team</p>
+			                    </div>
+			                    <div class="team-list">
+			                        <div class="team-box team-box1" @click="pop=1" data-scroll-reveal="enter from the top  over 1s">
+			                            <div class="team-info">
+			                                <p class="team-name">Andy Lee</p>
+			                                <p class="team-title">Executive Producer</p>
+			                            </div>
+			                        </div>
+			                        <div class="team-box team-box2" @click="pop=3" data-scroll-reveal="enter from the top  over 1s">
+			                            <div class="team-info">
+			                                <p class="team-name">Alex Chong</p>
+			                                <p class="team-title">Head of Web3 Products</p>
+			                            </div>
+			                        </div>
+			                        <div class="team-box team-box3" @click="pop=6" data-scroll-reveal="enter from the top  over 1s">
+			                            <div class="team-info">
+			                                <p class="team-name">Jacky Cheung</p>
+			                                <p class="team-title">Head of Growth</p>
+			                            </div>
+			                        </div>
+			                        <div class="team-box team-box4" @click="pop=4" data-scroll-reveal="enter from the top  over 1s">
+			                            <div class="team-info">
+			                                <p class="team-name">Jason Zheng</p>
+			                                <p class="team-title">Tech Lead</p>
+			                            </div>
+			                        </div>
+			                        <div class="team-box team-box5" @click="pop=2" data-scroll-reveal="enter from the bottom  over 1s">
+			                            <div class="team-info">
+			                                <p class="team-name">Shawn Yu</p>
+			                                <p class="team-title">Game Producer</p>
+			                            </div>
+			                        </div>
+			                        <div class="team-box team-box6" @click="pop=5" data-scroll-reveal="enter from the bottom  over 1s">
+			                            <div class="team-info">
+			                                <p class="team-name">Wei Su</p>
+			                                <p class="team-title">Lead Game Designer</p>
+			                            </div>
+			                        </div>
+			                        <div class="team-box team-box7" @click="pop=7" data-scroll-reveal="enter from the bottom  over 1s">
+			                            <div class="team-info">
+			                                <p class="team-name">Romy Luo</p>
+			                                <p class="team-title">Art Director</p>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			
+			            <div class="home-page7" id="c6">
+			                <div class="container">
+			                    <div class="tit-box tit-box2" data-scroll-reveal="enter from the bottom over 1s">
+			                        <p>INVESTORS & PARTNERS</p>
+			                    </div>
+			                    <div class="logo-txt" data-scroll-reveal="enter from the top over 1s"> To Be Announced soon, <br> Stay Tuned! </div>
+			                    <!-- <div class="logo-list" data-scroll-reveal="enter from the bottom  over 1s"></div> -->
+			                </div>
+			            </div>
+			        <!-- </div> -->
+			
+			        <div class="footer">
+						<em class="bottom-logo"></em>
+			            <ul>
+							<li>
+								<p class="foot-t1">CONTACT US</p>
+								<p class="foot-t2"><a href="mailto:contact@karmaverse.io">contact@karmaverse.io</a></p>
+							</li>
+			                <li>
+			                    <!-- <p class="foot-t1">COMMUNITY</p> -->
+			                    <div class="foot-icon">
+			                        <a href="https://twitter.com/LastOdyssey_io" target="_blank"><img src="img/m/foot-icon1.png" alt=""></a>
+			                        <a href="https://t.me/LastOdyssey" target="_blank"><img src="img/m/foot-icon2.png" alt=""></a>
+			                        <a href="https://discord.gg/SZfTKeV8yC" target="_blank"><img src="img/m/foot-icon4.png" alt=""></a>
+			                        <a href="https://www.youtube.com/@lastodyssey_io" target="_blank"><img src="img/m/foot-icon5.png" alt=""></a>
+			                        <a href="https://medium.com/@lastodyssey" target="_blank"><img src="img/m/foot-icon6.png" alt=""></a>
+			                    </div>
+			                </li>
+			                <li>
+			                    <a href="javascript:alert('COMING SOON');" class="btn-down"><img src="img/home/down2.png" alt=""></a>
+			                    <a href="javascript:alert('COMING SOON');" class="btn-down"><img src="img/home/down1.png" alt=""></a>
+			                </li>
+			            </ul>
+			        </div>  
+			        
+			        <div class="pop-box" v-if="pop==1">
+			            <div class="pop1">
+			                <div class="rw-img"><img src="img/home/p_rw1.png" alt=""></div>
+			                <div class="rw-info">
+			                    <div class="rw-t2">
+			                        <p>
+			                            Co-founder and CEO of Mugen Interactive
+			                            <br>
+			                            Executive Producer of Legend of Arcadia 
+			                        </p>
+			                    </div>
+			                    <p class="rw-t1">Andy Lee</p>
+			                    <div class="rw-t3">
+			                        <p><em>●</em> Experience in gaming, finance, and fintech </p>
+			                        <p><em>●</em> Previously led and built new strategic initiatives at WeLab, a leading fintech company with 50m+ registered users, including launching WeLab Bank (3rd largest digital bank in Hong Kong) and acquisition of Bank Jasa Jakarta in Indonesia. </p>
+			                        <p><em>●</em> Built multiple hit game titles at Lightspeed Studios at Tencent, with a broad range of casual and mid-core genres (sports, racing, autobattlers) that generated hundreds of millions of revenue and 1m+ DAU for all games </p>
+			                        <p><em>●</em> Former Associate Director, HK/China Equity at Julius Baer ● Former Investment Anlayst at Merrill Lynch </p>
+			                        <p><em>●</em> Graduated from Carnegie Mellon University</p>
+			                    </div>
+			                </div>
+			                <a href="javascript:;" @click="pop=0" class="close"></a>
+			            </div>
+			        </div>
+			
+			        <div class="pop-box" v-if="pop==2">
+			            <div class="pop1">
+			                <div class="rw-img"><img src="img/home/p_rw1.png" alt=""></div>
+			                <div class="rw-info">
+			                    <div class="rw-t2">
+			                        <p>
+			                            Game Producer for Legend of Arcadia 
+			                        </p>
+			                    </div>
+			                    <p class="rw-t1">Shawn Yu</p>
+			                    <div class="rw-t3">
+			                        <p><em>●</em> 10 years in gaming industry with 5 years specialising in game system design </p>
+			                        <p><em>●</em> 5 years of game publishing experience in Hero Entertainment and Baidu Games, covering multiple genres in Card-based, RPG and shooting </p>
+			                        <p><em>●</em> Led core game design in 3D MMORPG series ‘Lost Temple’ and ‘Sky Change’ </p>
+			                        <p><em>●</em> Published multiple hit game titles which top iOS and Android rankings in downloads, such as ‘Clash of Panzer: Tank Battle’</p>
+			                    </div>
+			                </div>
+			                <a href="javascript:;" @click="pop=0" class="close"></a>
+			            </div>
+			        </div>
+			
+			        <div class="pop-box" v-if="pop==3">
+			            <div class="pop1">
+			                <div class="rw-img"><img src="img/home/p_rw1.png" alt=""></div>
+			                <div class="rw-info">
+			                    <div class="rw-t2">
+			                        <p>
+			                            Head of Products at Legend of Arcadia
+			                        </p>
+			                    </div>
+			                    <p class="rw-t1">Alex Chong</p>
+			                    <div class="rw-t3">
+			                        <p><em>●</em> 3+ years of work experience in tokenomics design and crypto & NFTs research</p>
+			                        <p><em>●</em> Previously worked for a family office and a private fund house as a Crypto Research Analyst</p>
+			                    </div>
+			                </div>
+			                <a href="javascript:;" @click="pop=0" class="close"></a>
+			            </div>
+			        </div>
+			
+			        <div class="pop-box" v-if="pop==4">
+			            <div class="pop1">
+			                <div class="rw-img"><img src="img/home/p_rw1.png" alt=""></div>
+			                <div class="rw-info">
+			                    <div class="rw-t2">
+			                        <p>
+			                            Tech Lead at Legend of Arcadia
+			                        </p>
+			                    </div>
+			                    <p class="rw-t1">Jason Zheng</p>
+			                    <div class="rw-t3">
+			                        <p><em>●</em> 15 years of game development expert at Seasun Studios and Tencent Games, specialising casual and midcore genres </p>
+			                        <p><em>●</em> Participated to produce blockbuster titles in Tencent such as ‘Roco Kingdom’ series</p>
+			                        <p><em>●</em> Led gaming production in Top 10 iOS & Android Games, such as ‘Brave Cross’</p>
+			                        <p><em>●</em> All-rounded tech veteran in deploying high concurrent network, distributed solutions, system deployment, high performance database design, game engine optimisation (rendering, CPU functionality, internal storage, I/O) </p>
+			                        <p><em>●</em> 5 years of blockchain engineering experience, including blockchain infrastructure, smart contract deployment and security</p>
+			                        <p><em>●</em> Cybersecurity expert at a top-tier global cybersecurity company</p>
+			                    </div>
+			                </div>
+			                <a href="javascript:;" @click="pop=0" class="close"></a>
+			            </div>
+			        </div>
+			
+			        <div class="pop-box" v-if="pop==5">
+			            <div class="pop1">
+			                <div class="rw-img"><img src="img/home/p_rw1.png" alt=""></div>
+			                <div class="rw-info">
+			                    <div class="rw-t2">
+			                        <p>
+			                            Lead Game Designer at Legend of Arcadia
+			                        </p>
+			                    </div>
+			                    <p class="rw-t1">Wei Su</p>
+			                    <div class="rw-t3">
+			                        <p><em>●</em> Game developer with decades of experience in Seasun Studios, and produced titles with a combined monthly revenue of USD 10m</p>
+			                        <p><em>●</em> Pioneered the concept of action card-based battle and published ‘Brave Cross’ in 2015</p>
+			                    </div>
+			                </div>
+			                <a href="javascript:;" @click="pop=0" class="close"></a>
+			            </div>
+			        </div>
+			
+			        <div class="pop-box" v-if="pop==6">
+			            <div class="pop1">
+			                <div class="rw-img"><img src="img/home/p_rw1.png" alt=""></div>
+			                <div class="rw-info">
+			                    <div class="rw-t2">
+			                        <p>
+			                            Head of Growth
+			                            <br>
+			                            Operations and Management at Legend of Arcadia
+			                        </p>
+			                    </div>
+			                    <p class="rw-t1">Jacky Cheung</p>
+			                    <div class="rw-t3">
+			                        <p><em>●</em> 3+ Years of working experience in Web3 Project management</p>
+			                        <p><em>●</em> Led 2 successfully launched Web3 projects. Raised over 6 Million.</p>
+			                    </div>
+			                </div>
+			                <a href="javascript:;" @click="pop=0" class="close"></a>
+			            </div>
+			        </div>
+			
+			        <div class="pop-box" v-if="pop==7">
+			            <div class="pop1">
+			                <div class="rw-img"><img src="img/home/p_rw1.png" alt=""></div>
+			                <div class="rw-info">
+			                    <div class="rw-t2">
+			                        <p>
+			                            Art Director
+			                        </p>
+			                    </div>
+			                    <p class="rw-t1">Romy Luo</p>
+			                    <div class="rw-t3">
+			                        <p><em>●</em> 7+ Years of game art,with projects spanning various regions worldwide</p>
+			                        <p><em>●</em> 2+Years experience in Gamefi, guided development and promotional art for several blockchain games.</p>
+			                    </div>
+			                </div>
+			                <a href="javascript:;" @click="pop=0" class="close"></a>
+			            </div>
+			        </div>
+			    </div>
+		</div>
+	</div>
+	<script src="js/swiper-bundle.js"></script>
+	<script src="js/vue.min.js"></script>
+    <script src="js/scrollReveal.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.parallax.js"></script>
+	<script type="text/javascript">
+		
+		new Vue ({
+			el: '#app',
+		    data() {
+		        return {
+		            pop: 0,
+		            navnum: 0,
+					navshow: false,
+					sourceArr: []
+		        }
+		    },
+		    created(){
+				$(".pop-box").css("opacity","1")
+				$(".nav-box").css("opacity","1")
+		    },
+		    mounted(){
+		        // 滚动动效
+		        new scrollReveal({
+		            reset: true,
+		            move: '50px'
+		        });
+		        // 页面滚动方法 end
+		
+		        //视差
+		        $('#c0').parallax();
+		
+		        //导航
+		        this.scrolls()
+		        window.addEventListener('scroll', this.scrolls);
+				
+				var swiper = new Swiper(".road-swiper", {
+					effect: "coverflow",
+					centeredSlides: true,
+					slidesPerView: 3,
+					coverflowEffect: {
+						rotate: 0,
+						stretch: -150,
+						depth: 180,
+						modifier: 1,
+						slideShadows: false
+					},
+				    navigation: {
+				        nextEl: ".swiper-button-next",
+				        prevEl: ".swiper-button-prev",
+				    },
+				});
+				
+				//插入序列帧图
+				for(var i=1;i<73;i++){
+				  $(".ani-box").append("<img src='img/hd/"+i+".jpg' alt='' />")
+				}
+				
+				//预加载头图动画
+				var imgPath = "img/";
+				for (var i = 1; i < 73; i++) {
+					this.sourceArr.push("hd/"+i+".jpg")
+				}
+				for (var i = 0; i < this.sourceArr.length; i++) {
+					this.sourceArr[i] = imgPath + this.sourceArr[i] ;
+				}
+				var that=this;
+				this.imgLoader(this.sourceArr, function(path, curNum, total) {
+					var percent = curNum / total;
+				//	$(".loading_bg").css("width",Math.floor(percent * 100)+"%")
+					if (percent == 1) {
+						 console.log("加载完成")
+						 that.aniHd()
+					}
+				});
+		        
+		    },
+		    methods:{
+				aniHd(){
+				  var snnum=0;
+				  $(".ani-box img").eq(snnum).css("opacity","1").siblings().css("opacity","0")
+				  var timer=setInterval(function(){
+				    snnum++;
+					snnum%=72;
+				    $(".ani-box img").eq(snnum).css("opacity","1").siblings().css("opacity","0")
+				  },40)
+				},
+				loadImage (path, callback) {
+					var img = new Image();
+					img.onload = function() {
+						img.onload = null;
+						callback(path);
+					};
+					img.src = path;
+				},
+				imgLoader (imgs, callback) {
+					var len = imgs.length,
+						i = 0;
+					while (imgs.length) {
+						this.loadImage(imgs.shift(), function(path) {
+							callback(path, ++i, len);
+						});
+					}
+				},
+		        gotonav(n) {
+		            document.documentElement.scrollTop = document.getElementById("c"+n).offsetTop-82;
+		            this.navshow=false;
+		        },
+		        scrolls() {
+		            var c0 = document.getElementById("c0").offsetTop,
+		                c1 = document.getElementById("c1").offsetTop-300,
+		                c2 = document.getElementById("c2").offsetTop-300,
+		                c3 = document.getElementById("c3").offsetTop-300,
+		                c4 = document.getElementById("c4").offsetTop-300,
+		                c5 = document.getElementById("c5").offsetTop-300,
+		                c6 = document.getElementById("c6").offsetTop-300;
+		            var s = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset;
+		            if (s >= c0 && s < c1) {
+		                this.navnum = 0
+		            } else if (s >= c1 && s < c2) {
+		                this.navnum = 1
+		            } else if (s >= c2 && s < c3) {
+		                this.navnum = 2
+		            } else if (s >= c3 && s < c4) {
+		                this.navnum = 3
+		            } else if (s >= c4 && s < c6) {
+		                this.navnum = 4
+		            }  else if (s >= c6) {
+		                this.navnum = 6
+		            }
+		            // else if (s >= c5 && s < c6) {
+		            //     this.navnum = 5
+		            // }
+		        }
+		    },
+		    beforeDestroy() {
+		    },
+		})
+	</script>
+  </body>
+</html>

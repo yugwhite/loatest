@@ -1,0 +1,50 @@
+@import './base.css';
+
+body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form,header,section,article,footer{margin:0;padding:0;}
+body,button,input,select,textarea{font-size:12px;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight: normal;}
+em,b{font-style:normal}
+a{text-decoration:none} 
+a:hover{text-decoration:none;}
+img{border:0} 
+button,input,select,textarea{font-size:100%;outline:none}
+table{border-collapse:collapse;border-spacing:0}
+td,th,ul,ol{padding:0;list-style: none;}
+
+@font-face {
+  font-family: 'font1';
+  src: url(arialbd.ttf);
+}
+@font-face {
+  font-family: 'font2';
+  src: url(ariblk.ttf);
+}
+@font-face {
+  font-family: 'font3';
+  src: url(arial.ttf);
+}
+body,html{scroll-behavior:smooth;-webkit-scroll-behavior:smooth;}
+body {
+  -webkit-text-size-adjust: auto  !important;
+  text-size-adjust:auto  !important;
+  -moz-text-size-adjust:auto !important;
+}
+#app {
+  margin: 0 auto;
+  font-family: 'font1';
+  background:#11110f;
+  overflow: hidden;
+}
+/* body,html{min-width: 1200px;} */
+.pa{position: absolute;}
+.pr{position: relative;}
+.fl{float: left;}
+.fr{float: right;}
+
+html{
+  overflow-x: auto;
+}
+html,body{
+  height: auto;
+  background:#11110f;
+}
